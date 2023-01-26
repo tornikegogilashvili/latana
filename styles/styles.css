@@ -14,6 +14,7 @@ body{
     src:url(../fonts/bpg_glaho.ttf);
 }
 
+
 .header{
     width:100%;
     height: 126px;
@@ -50,8 +51,12 @@ body{
 }
 .header h1 a{
     width:10vw;
-    height:44px;
+    height:34px;
     display:block;
+}
+/* -------იუზერის ლოგო------- */
+.fa-user-icon{
+    display: none;
 }
 /* -----ბურგერ მენიუ----- */
 .fa-bars-icon{
@@ -86,6 +91,7 @@ body{
     color:#FDFDFD;
     font-weight: bold;
     font-size: 2.9vw;
+    z-index: 1;
 }
 /* -----სერჩის ბარი---- */
 .search_bar{
@@ -213,6 +219,9 @@ footer{
     width:24vw;
     position: relative;
 }
+/* .relative{
+    position: relative;
+} */
 .article_latestnews_p{
     font-size: 12px;
     margin: 16px 0;
@@ -223,6 +232,14 @@ footer{
 }
 .article_latestnews_p_text{
     margin:16px 0 24px 0;
+}
+.streightline{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #4F46E5; */
 }
 .article_latestnews_div_person {
     display: flex;
@@ -242,10 +259,15 @@ footer{
     color: rgba(0, 0, 0, 0.5);
 }
 .article_social_div{
+    /* position: absolute;
+    left: 70%;
+    bottom: 3%; */
+}
+/* .absolute{
     position: absolute;
     left: 70%;
     bottom: 3%;
-}
+} */
 .article_social_div img{
     padding:0 4px;
 }
@@ -254,11 +276,259 @@ footer{
     cursor: pointer;
 }
 .p_readall{
-    margin: 6vh 0 0 8.8vw;
+    margin: 12vh 0 0 8.8vw;
     font-weight: bold;
 }
 /* -------big div image----- */
 .big_div_image img{
     margin:20vh 8.7vw;
     width: 80vw;
+}
+
+
+/* -------menu.html sections ------ */
+.menu_main{
+    margin-top: 80px;
+    /* padding: 0 8.8vw; */
+}
+.menu_main_h2_latestnews{
+    padding: 0 8.8vw;
+}
+.menu_main_div{
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 8.8vw;
+}
+.menu_div{
+    /* width:150px; */
+    /* overflow: hidden; */
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;   
+}
+.menu_section{
+    width: 24vw;
+    margin: 12vh 0;
+    position: relative;
+    /* background-color: aquamarine; */
+}
+.menu_section_div{
+    width:24vw;  
+}
+.menu_section_div img{
+    width:24vw;
+    height: 34vh;
+    overflow: hidden;  
+    border-radius: 8px;
+}
+.menu_section_title{
+    font-size: 24px;
+    color: #000000; 
+    margin: 2.4vh 0;  
+    
+}
+.menu_section_text{
+    color: #161616;
+    margin:4.4vh 0;
+    height: 14vh;
+    /* background-color: #4F46E5; */
+}
+
+
+
+
+
+/* -------------------------------------
+----------ipad air resolution--------
+------------------------------------- */
+@media screen and (max-width:820px) {
+    .header{
+        width:unset;
+        /* height: unset; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* padding-top:60px; */
+    }
+    
+    /* -----ნავიგაციის ბარი---- */
+    .index_html_main{
+        position: relative;
+    }
+    .navigation{
+        display: none;
+        
+    }
+    .secondNavigation{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position:absolute;
+        background-color: #4F46E5;
+        width: 100%;
+        z-index: 2;
+        border-radius: 16px;
+    }
+    .secondNavigation ul li{
+        font-size: 16px;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+    }
+    .secondNavigation ul li a{
+        font-size: 16px;
+        padding: 10px 15px;
+        color: #FDFDFD;
+    }
+    .navigation ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .navigation ul li a{
+        
+    }
+    /* -------იუზერის ლოგო------- */
+    .fa-user-icon{
+        display:block;
+        font-size: 30px;
+    }
+    /* ------მთავარი ლოგო----- */
+    .header h1{
+        padding: unset;
+        margin:unset;
+        width:10.8vw;
+        /* height: 50px; */
+        background-image: url(../images/main_logo.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        text-indent: -999px;
+        
+    }
+    .header h1 a{
+        width:10.8vw;
+        /* height:34px; */
+        display:block;
+    }
+
+    /* -----ბურგერ მენიუ----- */
+    .fa-bars-icon{
+        display: block;
+        font-size: 30px;
+    }
+
+    /* ------ლოგ ინი------ */
+    .header_p{
+        display: none;
+    }
+    /* -----ბლოგის იმიჯი,ტექსტი------- */
+    .div_image_blog_image {
+        
+    }
+    .div_image_blog_image img{
+        
+        
+    }
+    .div_image_blog_image div{
+        
+    }
+    /* -----სერჩის ბარი---- */
+    .search_bar{
+        
+    }
+    /* ------მეორე ul li---- */
+    .main_ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: unset;
+        /* width: 48.6vw; */
+        margin:64px auto 0;  
+        font-size: 1.2vw;
+    }
+    .main_ul_li a{
+        color: #000000;
+        padding:8px 15px;
+        transition: 0.5s;
+        border-radius:8px;
+    }
+    .main_ul_li a:hover{
+        color: #FDFDFD;
+        background-color: #4F46E5;
+        
+    }
+    /* -----main latest news----- */
+    .article_latestnews{
+        width:80vw;
+        display: flex;
+        margin-bottom: 30px;
+        box-shadow: #7C7C7C 5px 5px 10px ;
+        border-radius: 16px;
+    }
+    .article_latestnews_div img{
+        width:30vw;
+        height: 100%;
+        margin-right: 20px;
+        border-radius: 16px;
+    }
+    .article_latestnews_section{
+        width:64vw;
+        position: relative;
+        
+        
+        
+    }
+    /* .relative{
+        position: relative;
+    } */
+    .article_latestnews_p{
+        font-size: 12px;
+        margin: 16px 0;
+    }
+    .article_latestnews_h2{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .article_latestnews_p_text{
+        margin:16px 0 24px 0;
+    }
+    .streightline{
+        width: 100%;
+        position: unset;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: #4F46E5; */
+    }
+    .article_latestnews_div_person {
+        display: flex;
+        align-items: center;
+        
+    }
+    .article_latestnews_div_person img{
+        width:2.9vw;
+        height: 6.6vh;
+        margin-right: 1.2vw;
+    }
+    .article_latestnews_name{
+        font-weight: bold;
+    }
+    .article_latestnews_date{
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .news_div{
+        display: flex;
+        flex-wrap: wrap;
+        margin:auto 8.8vw;
+    }
+    /* -------big div image----- */
+    .big_div_image img{
+        margin:unset;
+        width: 100%;
+        margin: 10vh 0;
+    }
 }

@@ -1,32 +1,53 @@
-const getInfo = async () => {
-    
+const menu_div = document.querySelector(".menu_div");
+const enterInf = document.querySelector(".enter_main_div");
+
+const getInformation = async () => {
     try {
-        const users = await fetch('https://dummyjson.com/products?limit=10&skip=10').then(_=>_.json())
-        for(let i=0;i<users.products.length;i++){
-            console.log(users.products[i].images[0]);
-            // create section and its class---
-            let section = document.createElement("section");
-
-            let menu_main_div = document.getElementById("menu_main_div");
-
-            section.classList.add("menu_main_section");
-
-            menu_main_div.appendChild(section);
-
-            let img = document.createElement("img");
-
-            let menu_main_section = document.querySelector(".menu_main_section");
-
-            menu_main_section.appendChild(img);
-
-            img.src=users.products[i].images[0];
-
-        }
-        
+        let users = await fetch('https://dummyjson.com/products?limit=10')
+        .then(_=>_.json());
+        users.products.forEach(info=>{
+            console.log(info)
+            console.log(info.id);
+            menu_div.innerHTML=menu_div.innerHTML+
+            `
+            <section class="menu_section">
+                <a href="enter.html"><div class="menu_section_div"><img src="${info.images[0]}" alt="latana"></div></a>
+                <p class="menu_section_category">${info.category}</p>
+                <h3 class="menu_section_title">${info.title}</h3>
+                <p class="menu_section_text">${info.description}</p>
+                <p></p>
+                <div class="streightline">
+                <div class= "article_latestnews_div_person">
+                    <img src="images/profile_photo.jpg" alt="profile picture">
+                    <div class="article_latestnews_div_name">
+                        <p class="article_latestnews_name">George Thomas</p>
+                        <p class="article_latestnews_date">22.01.1996</p>
+                    </div>
+                </div>
+                <div class="article_social_div ">
+                    <img src="images/Like Icon.png" alt="like icon">
+                    <img src="images/Comment Icon.png" alt="comment icon">
+                    <img src="images/Share Icon.png" alt="share icon">
+                </div>
+            </div>
+            </section>
+            `
+            // enterInf.innerHTML=enterInf.innerHTML+
+            // `
+            // <h3 class="enter_main_title">${info.title}</h3>
+            // `
+            
+        });
         
         
     } catch (error) {
         console.log(error);
     }
+    
 }
-getInfo();
+
+getInformation();
+
+
+
+
