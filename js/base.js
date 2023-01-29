@@ -12,24 +12,27 @@ const getInformation = async () => {
             `
             <section class="menu_section">
                 <a href="enter.html"><div class="menu_section_div"><img src="${info.images[0]}" alt="latana"></div></a>
-                <p class="menu_section_category">${info.category}</p>
-                <h3 class="menu_section_title">${info.title}</h3>
-                <p class="menu_section_text">${info.description}</p>
-                <p></p>
-                <div class="streightline">
-                <div class= "article_latestnews_div_person">
-                    <img src="images/profile_photo.jpg" alt="profile picture">
-                    <div class="article_latestnews_div_name">
-                        <p class="article_latestnews_name">George Thomas</p>
-                        <p class="article_latestnews_date">22.01.1996</p>
+                <div class="menu_section_div_2">
+                    <p class="menu_section_category">${info.category}</p>
+                    <h3 class="menu_section_title">${info.title}</h3>
+                    <p class="menu_section_text">${info.description}</p>
+                    <p></p>
+                    <div class="streightline">
+                        <div class= "article_latestnews_div_person">
+                            <img src="images/profile_photo.jpg" alt="profile picture">
+                            <div class="article_latestnews_div_name">
+                                <p class="article_latestnews_name">George Thomas</p>
+                                <p class="article_latestnews_date">22.01.1996</p>
+                            </div>
+                        </div>
+                        <div class="article_social_div ">
+                            <img src="images/Like Icon.png" alt="like icon">
+                            <img src="images/Comment Icon.png" alt="comment icon">
+                            <img src="images/Share Icon.png" alt="share icon">
+                        </div>
                     </div>
                 </div>
-                <div class="article_social_div ">
-                    <img src="images/Like Icon.png" alt="like icon">
-                    <img src="images/Comment Icon.png" alt="comment icon">
-                    <img src="images/Share Icon.png" alt="share icon">
-                </div>
-            </div>
+                
             </section>
             `
             // enterInf.innerHTML=enterInf.innerHTML+
