@@ -122,7 +122,6 @@ body{
     align-items: center;
     width: 48.6vw;
     margin:64px auto 0;
-    
     font-size: 1.2vw;
 }
 .main_ul_li a{
@@ -595,5 +594,100 @@ footer{
     height: 6vh;
     /* background-color: #4F46E5; */
 }
-
+.footer_div_1 h3{
+    font-size: 2.2vw;
+}
+}
+/* -------------------------------------
+----------iphone 12 pro resolution--------
+------------------------------------- */
+@media screen and (max-width:375px) {
+    /* ------მთავარი ლოგო----- */
+    .header h1{
+        padding: unset;
+        margin:unset;
+        width:35vw;
+        /* height: 50px; */
+        background-image: url(../images/main_logo.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        text-indent: -999px;
+        
+    }
+    .header h1 a{
+        width:35vw;
+        /* height:34px; */
+        display:block;
+    }
+    /* -----ბლოგის იმიჯი,ტექსტი------- */
+.div_image_blog_image {
+    width:100%;
+    position:relative;
+    text-align: center;
+}
+.div_image_blog_image img{
+    width:82%;
+    height: 9.7vh;
+    border-radius: 8px;
+}
+.div_image_blog_image div{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:#FDFDFD;
+    font-weight: bold;
+    font-size: 3.9vw;
+    z-index: 1;
+}
+/* -----სერჩის ბარი---- */
+.search_bar{
+    width: 45vw;
+    height: 32px;
+    border-radius: 16px;
+    border:#D9D9D9 solid 2px;
+    position:absolute;
+    top:95%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0px 5px 5px #7C7C7C;
+    letter-spacing: unset;
+    
+}
+.empty {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+/* -----ნავიგაციის ბარი---- */
+    .main_ul{
+        display: none;
+    }
+    .main_ul_p{
+        padding: 10px 15px;
+        margin: 40px 0 0 32px;
+        background-color: #4F46E5;
+        color: #FDFDFD;
+        border-radius: 16px;
+        display: inline-block;
+    }
+    .main_ul_2 li{
+        
+        padding: 8px 15px;
+    }
+    .main_ul_2 a{
+        padding: unset;
+        color: #FDFDFD;
+    }
+    .backgroundBlue{
+        background-color: #4F46E5;
+        width: 100%;
+        border-radius: 16px;
+        color: #FDFDFD;
+        /* margin-left: 32px; */
+        position: absolute;
+    }
 }
