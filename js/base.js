@@ -1,16 +1,17 @@
 const menu_div = document.querySelector(".menu_div");
-const enterInf = document.querySelector(".enter_main_div");
-
+let data =[];
 const getInformation = async () => {
     try {
-        let users = await fetch('https://dummyjson.com/products?limit=10')
-        .then(_=>_.json());
+        let users = await fetch('https://dummyjson.com/products?limit=9')
+        .then(_=>_.json())
         users.products.forEach(info=>{
-            console.log(info)
-            console.log(info.id);
+            // console.log(info)
+            // const id = info.id;
+            // console.log(id)
             menu_div.innerHTML=menu_div.innerHTML+
             `
-            <section class="menu_section">
+            <section class="menu_section" id="${info.id}">
+                
                 <a href="enter.html"><div class="menu_section_div"><img src="${info.images[0]}" alt="latana"></div></a>
                 <div class="menu_section_div_2">
                     <p class="menu_section_category">${info.category}</p>
@@ -25,23 +26,41 @@ const getInformation = async () => {
                                 <p class="article_latestnews_date">22.01.1996</p>
                             </div>
                         </div>
-                        <div class="article_social_div ">
-                            <img src="images/Like Icon.png" alt="like icon">
-                            <img src="images/Comment Icon.png" alt="comment icon">
-                            <img src="images/Share Icon.png" alt="share icon">
-                        </div>
+                        
                     </div>
                 </div>
-                
+              
             </section>
             `
-            // enterInf.innerHTML=enterInf.innerHTML+
-            // `
-            // <h3 class="enter_main_title">${info.title}</h3>
-            // `
             
-        });
         
+        })   
+            const section = document.querySelectorAll(".menu_section");
+
+        section.forEach(e=>{
+            e.addEventListener("click",()=>{
+                console.log(e.id);
+                menu_div.innerHTML="";
+
+                menu_div.innerHTML=menu_div.innerHTML+ 
+                `
+                <div class="enter_main_div" id="enter_main_div">
+                    <h3 class="enter_main_title">${users.products[e.id-1].title}</h3>
+                    
+                    <p class="enter_main_text">${users.products[e.id-1].description}</p>
+                       
+                    <div class="enter_main_img_div"><img class="enter_main_img" src="${users.products[e.id-1].images[0]}" alt="latana"></div>
+                    <p class="enter_main_text">${users.products[e.id-1].description}</p>
+                    <div class="enter_main_little_div">
+                        <img class="enter_main_little_img" src="${users.products[e.id-1].images[1]}" alt="latana">
+                        <img class="enter_main_little_img" src="${users.products[e.id-1].images[2]}" alt="latana">
+                    </div>
+                    <p class="enter_main_text">${users.products[e.id-1].description}</p>
+                </div>
+                `
+            }) 
+        });
+    
         
     } catch (error) {
         console.log(error);
@@ -50,7 +69,6 @@ const getInformation = async () => {
 }
 
 getInformation();
-
 
 
 
