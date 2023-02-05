@@ -336,7 +336,30 @@ footer{
     height: 14vh;
     /* background-color: #4F46E5; */
 }
-
+/* -------shida gverdi------- */
+.enter_main_title{
+    font-size:24px;
+    font-weight:bold;
+    margin-top:30px;
+}
+.enter_main_text{
+    font-size: 12px;
+    color: #7C7C7C;
+    margin:30px 0;
+}
+.enter_main_img{
+    margin: 30px 0;
+}
+.enter_main_little_div{
+    display: flex;
+    justify-content: space-around;
+    margin:30px 0;
+    width:100%;
+}
+.enter_main_little_img{
+    width:50%;
+    height: 300px;
+}
 
 
 
@@ -599,6 +622,25 @@ footer{
 .footer_div_1 h3{
     font-size: 2.2vw;
 }
+.enter_main_title{
+    font-size:24px;
+    font-weight:bold;
+    margin-top:30px;
+}
+.enter_main_text{
+    font-size: 12px;
+    color: #7C7C7C;
+    margin:30px 0;
+}
+.enter_main_img{
+    margin: 30px 0;
+}
+.enter_main_little_div{
+    display: flex;
+    justify-content: space-around;
+    margin:30px 0;
+}
+
 }
 /* -------------------------------------
 ----------iphone 12 pro resolution--------
@@ -803,5 +845,24 @@ footer{
         padding: 5px 0;
         border: #ffffff 1px solid;
         width: 100%;
+    }
+    /* -----------shida gverdi------- */
+    .enter_main_title{
+        font-size:24px;
+        font-weight:bold;
+        margin-top:30px;
+    }
+    .enter_main_text{
+        font-size: 12px;
+        color: #7C7C7C;
+        margin:30px 0;
+    }
+    .enter_main_img{
+        margin: 30px 0;
+    }
+    .enter_main_little_div{
+        display: flex;
+        justify-content: space-around;
+        margin:30px 0;
     }
 }
