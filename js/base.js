@@ -40,7 +40,7 @@ const getInformation = async (skip) => {
             e.addEventListener("click",()=>{
                 console.log(e.id);
                 index_html_main.innerHTML="";
-
+                if(e.id<10){
                 index_html_main.innerHTML=index_html_main.innerHTML+ 
                 `
                 <nav id="secondNavigation" class="secondNavigation" style="display:none"></nav>
@@ -65,6 +65,7 @@ const getInformation = async (skip) => {
                     </div>
                     <p class="enter_main_text">${users.products[e.id-1].description}</p>
                 </div>
+                
                 <h2 class="base_h2">related news</h2>
                 <div class="news_div ">
                     <article class="article_latestnews">
@@ -142,8 +143,216 @@ const getInformation = async (skip) => {
                         </section>
                         
                     </article>
-                `
-            }) 
+                `}
+                if(e.id>9&&e.id<19){
+                    index_html_main.innerHTML=index_html_main.innerHTML+ 
+                    `
+                    <nav id="secondNavigation" class="secondNavigation" style="display:none"></nav>
+                    
+                    <div class="menu_main_div" id="menu_main_div">
+                    <div class="enter_main_div" id="enter_main_div">
+                        <h3 class="enter_main_title">${users.products[e.id-10].title}</h3>
+                            
+                        <p class="enter_main_text">${users.products[e.id-10].description}</p>
+                           <div class= "article_latestnews_div_person">
+                                <img src="images/profile_photo.jpg" alt="profile picture">
+                                <div class="article_latestnews_div_name">
+                                    <p class="article_latestnews_name">George Thomas</p>
+                                    <p class="article_latestnews_date">22.01.1996</p>
+                                </div>
+                            </div>
+                        <div class="enter_main_img_div"><img class="enter_main_img" src="${users.products[e.id-10].images[0]}" alt="latana"></div>
+                        <p class="enter_main_text">${users.products[e.id-10].description}</p>
+                        <div class="enter_main_little_div">
+                            <img class="enter_main_little_img" src="${users.products[e.id-10].images[1]}" alt="latana">
+                            <img class="enter_main_little_img" src="${users.products[e.id-10].images[2]}" alt="latana">
+                        </div>
+                        <p class="enter_main_text">${users.products[e.id-10].description}</p>
+                    </div>
+                    
+                    <h2 class="base_h2">related news</h2>
+                    <div class="news_div ">
+                        <article class="article_latestnews">
+                            <div class="article_latestnews_div">
+                                <img src="images/Group 4.png" alt="latana news">
+                            </div>
+                            <section class= "article_latestnews_section relative">
+                                    <p class="article_latestnews_p"><a href="#">lorem ipsum</a> </p>
+                                <h2 class="article_latestnews_h2">Lorem ipsum dolor sit amet</h2>
+                                <p class="article_latestnews_p_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique id neque, risus diam, nunc. Sit cras sed amet imperdiet quam est tortor. Nisl tortor, urna auctor neque morbi.</p>
+                                <div class="streightline">
+                                    <div class= "article_latestnews_div_person">
+                                        <img src="images/profile_photo.jpg" alt="profile picture">
+                                        <div class="article_latestnews_div_name">
+                                            <p class="article_latestnews_name">George Thomas</p>
+                                            <p class="article_latestnews_date">22.01.1996</p>
+                                        </div>
+                                    </div>
+                                    <div class="article_social_div">
+                                        <img src="images/Like Icon.png" alt="like icon">
+                                        <img src="images/Comment Icon.png" alt="comment icon">
+                                        <img src="images/Share Icon.png" alt="share icon">
+                                    </div>
+                                </div>
+                            </section>
+                            
+                        </article>
+                        <article class="article_latestnews">
+                            <div class="article_latestnews_div">
+                                <img src="images/Group 4 (1).png" alt="latana news">
+                            </div>
+                            <section class= "article_latestnews_section relative">
+                                    <p class="article_latestnews_p"><a href="#">lorem ipsum</a> </p>
+                                <h2 class="article_latestnews_h2">Lorem ipsum dolor sit amet</h2>
+                                <p class="article_latestnews_p_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique id neque, risus diam, nunc. Sit cras sed amet imperdiet quam est tortor. Nisl tortor, urna auctor neque morbi.</p>
+                                <div class="streightline">
+                                    <div class= "article_latestnews_div_person">
+                                    <img src="images/profile_photo.jpg" alt="profile picture">
+                                    <div class="article_latestnews_div_name">
+                                        <p class="article_latestnews_name">George Thomas</p>
+                                        <p class="article_latestnews_date">22.01.1996</p>
+                                    </div>
+                                </div>
+                                <div class="article_social_div">
+                                    <img src="images/Like Icon.png" alt="like icon">
+                                    <img src="images/Comment Icon.png" alt="comment icon">
+                                    <img src="images/Share Icon.png" alt="share icon">
+                                </div></div>
+                                
+                            </section>
+                            
+                        </article>
+                        <article class="article_latestnews">
+                            <div class="article_latestnews_div">
+                                <img src="images/Group 4 (2).png" alt="latana news">
+                            </div>
+                            <section class= "article_latestnews_section relative">
+                                    <p class="article_latestnews_p"><a href="#">lorem ipsum</a> </p>
+                                <h2 class="article_latestnews_h2">Lorem ipsum dolor sit amet</h2>
+                                <p class="article_latestnews_p_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique id neque, risus diam, nunc. Sit cras sed amet imperdiet quam est tortor. Nisl tortor, urna auctor neque morbi.</p>
+                                <div class="streightline">
+                                    <div class= "article_latestnews_div_person">
+                                    <img src="images/profile_photo.jpg" alt="profile picture">
+                                    <div class="article_latestnews_div_name">
+                                        <p class="article_latestnews_name">George Thomas</p>
+                                        <p class="article_latestnews_date">22.01.1996</p>
+                                    </div>
+                                </div>
+                                <div class="article_social_div">
+                                    <img src="images/Like Icon.png" alt="like icon">
+                                    <img src="images/Comment Icon.png" alt="comment icon">
+                                    <img src="images/Share Icon.png" alt="share icon">
+                                </div></div>
+                                
+                            </section>
+                            
+                        </article>
+                    `}
+                    if(e.id>19&&e.id<29){
+                        index_html_main.innerHTML=index_html_main.innerHTML+ 
+                        `
+                        <nav id="secondNavigation" class="secondNavigation" style="display:none"></nav>
+                        
+                        <div class="menu_main_div" id="menu_main_div">
+                        <div class="enter_main_div" id="enter_main_div">
+                            <h3 class="enter_main_title">${users.products[e.id-19].title}</h3>
+                                
+                            <p class="enter_main_text">${users.products[e.id-19].description}</p>
+                               <div class= "article_latestnews_div_person">
+                                    <img src="images/profile_photo.jpg" alt="profile picture">
+                                    <div class="article_latestnews_div_name">
+                                        <p class="article_latestnews_name">George Thomas</p>
+                                        <p class="article_latestnews_date">22.01.1996</p>
+                                    </div>
+                                </div>
+                            <div class="enter_main_img_div"><img class="enter_main_img" src="${users.products[e.id-19].images[0]}" alt="latana"></div>
+                            <p class="enter_main_text">${users.products[e.id-19].description}</p>
+                            <div class="enter_main_little_div">
+                                <img class="enter_main_little_img" src="${users.products[e.id-19].images[1]}" alt="latana">
+                                <img class="enter_main_little_img" src="${users.products[e.id-19].images[2]}" alt="latana">
+                            </div>
+                            <p class="enter_main_text">${users.products[e.id-19].description}</p>
+                        </div>
+                        
+                        <h2 class="base_h2">related news</h2>
+                        <div class="news_div ">
+                            <article class="article_latestnews">
+                                <div class="article_latestnews_div">
+                                    <img src="images/Group 4.png" alt="latana news">
+                                </div>
+                                <section class= "article_latestnews_section relative">
+                                        <p class="article_latestnews_p"><a href="#">lorem ipsum</a> </p>
+                                    <h2 class="article_latestnews_h2">Lorem ipsum dolor sit amet</h2>
+                                    <p class="article_latestnews_p_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique id neque, risus diam, nunc. Sit cras sed amet imperdiet quam est tortor. Nisl tortor, urna auctor neque morbi.</p>
+                                    <div class="streightline">
+                                        <div class= "article_latestnews_div_person">
+                                            <img src="images/profile_photo.jpg" alt="profile picture">
+                                            <div class="article_latestnews_div_name">
+                                                <p class="article_latestnews_name">George Thomas</p>
+                                                <p class="article_latestnews_date">22.01.1996</p>
+                                            </div>
+                                        </div>
+                                        <div class="article_social_div">
+                                            <img src="images/Like Icon.png" alt="like icon">
+                                            <img src="images/Comment Icon.png" alt="comment icon">
+                                            <img src="images/Share Icon.png" alt="share icon">
+                                        </div>
+                                    </div>
+                                </section>
+                                
+                            </article>
+                            <article class="article_latestnews">
+                                <div class="article_latestnews_div">
+                                    <img src="images/Group 4 (1).png" alt="latana news">
+                                </div>
+                                <section class= "article_latestnews_section relative">
+                                        <p class="article_latestnews_p"><a href="#">lorem ipsum</a> </p>
+                                    <h2 class="article_latestnews_h2">Lorem ipsum dolor sit amet</h2>
+                                    <p class="article_latestnews_p_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique id neque, risus diam, nunc. Sit cras sed amet imperdiet quam est tortor. Nisl tortor, urna auctor neque morbi.</p>
+                                    <div class="streightline">
+                                        <div class= "article_latestnews_div_person">
+                                        <img src="images/profile_photo.jpg" alt="profile picture">
+                                        <div class="article_latestnews_div_name">
+                                            <p class="article_latestnews_name">George Thomas</p>
+                                            <p class="article_latestnews_date">22.01.1996</p>
+                                        </div>
+                                    </div>
+                                    <div class="article_social_div">
+                                        <img src="images/Like Icon.png" alt="like icon">
+                                        <img src="images/Comment Icon.png" alt="comment icon">
+                                        <img src="images/Share Icon.png" alt="share icon">
+                                    </div></div>
+                                    
+                                </section>
+                                
+                            </article>
+                            <article class="article_latestnews">
+                                <div class="article_latestnews_div">
+                                    <img src="images/Group 4 (2).png" alt="latana news">
+                                </div>
+                                <section class= "article_latestnews_section relative">
+                                        <p class="article_latestnews_p"><a href="#">lorem ipsum</a> </p>
+                                    <h2 class="article_latestnews_h2">Lorem ipsum dolor sit amet</h2>
+                                    <p class="article_latestnews_p_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique id neque, risus diam, nunc. Sit cras sed amet imperdiet quam est tortor. Nisl tortor, urna auctor neque morbi.</p>
+                                    <div class="streightline">
+                                        <div class= "article_latestnews_div_person">
+                                        <img src="images/profile_photo.jpg" alt="profile picture">
+                                        <div class="article_latestnews_div_name">
+                                            <p class="article_latestnews_name">George Thomas</p>
+                                            <p class="article_latestnews_date">22.01.1996</p>
+                                        </div>
+                                    </div>
+                                    <div class="article_social_div">
+                                        <img src="images/Like Icon.png" alt="like icon">
+                                        <img src="images/Comment Icon.png" alt="comment icon">
+                                        <img src="images/Share Icon.png" alt="share icon">
+                                    </div></div>
+                                    
+                                </section>
+                                
+                            </article>
+                        `}
+            })
         });
     
         

@@ -573,7 +573,7 @@ footer{
     }
     .article_latestnews_div_person img{
         width:2.9vw;
-        height: 6.6vh;
+        height: 3.6vh;
         margin-right: 1.2vw;
     }
     .article_latestnews_name{
@@ -807,7 +807,7 @@ footer{
         justify-content: space-between;
     }
     .news_div{
-
+        margin-left: 8vw;
     }
     .article_latestnews{
         height: 110px;
